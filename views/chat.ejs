@@ -1,0 +1,34 @@
+<%- include('header.ejs') %>
+<div id="namesection" >
+
+    <h2>Please enter your name to continue</h2>
+    <input type="text" id="name" required="true" maxlength="8" placeholder="Enter your name" >
+    <button onclick="setName()" >Submit</button>
+
+</div>
+<div id="waitingArea"></div>
+<div id="Initial">
+    <button onclick="createRoom()">Create Room</button>
+    <p>OR</p>
+    <input id="roomUniqueId" type="text">
+    <button onclick="joinRoom()" >Join Room</button>
+</div>
+
+
+<div id="chatBox">
+
+
+
+</div>
+<div class="sendSection">
+    <input id="msgInput" placeholder="Send message" type="text">
+    <button onclick="sendMsg()" >Send</button>
+</div>
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/index.js"></script>
+</html>
